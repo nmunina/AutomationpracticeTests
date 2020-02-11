@@ -9,6 +9,7 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
     String expectedPageTitle = "My Store";
     String actualPageTitle = "";
 
+    // test "get page title and compare"
     @Test
     public void pageTitle() {
         driver.get(baseUrl);
