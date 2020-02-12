@@ -3,9 +3,9 @@
 Studying the following tutorials
 * https://www.techbeamers.com/selenium-webdriver-tutorial/
     * [x] Locating GUI Elements
-    * [] Instantiating Web Elements
+    * [x] Instantiating Web Elements
     * [x] Clicking on an Element
-    * [x] Get Commands
+    * [x] Get Commands (ToDo: get by link)
     * [] Navigate commands
     * [] Closing and Quitting Browser Windows
     * [] Switching Between Frames
@@ -15,13 +15,16 @@ Studying the following tutorials
     * [] Catching Exceptions
     
 * https://www.guru99.com/selenium-tutorial.html
+* https://www.softwaretestinghelp.com/selenium-tutorial-1/
 
 ---
+
 Using following example sites
 * AutomationpracticeTests.com as a test site
 
 ---
-##Summary for locating elements
+
+## Summary for locating elements
 
 |  Variation | Description  | Sample   |
 |---|---|---|

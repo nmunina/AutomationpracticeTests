@@ -2,6 +2,8 @@ package webdriver;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import org.testng.Assert;
+
 
 public class AutomationpracticeChromeTests extends AbstractChromeWebDriverTest {
 
@@ -19,22 +21,15 @@ public class AutomationpracticeChromeTests extends AbstractChromeWebDriverTest {
         driver.get(baseUrl);
 
         // get the actual page title
-        actualTitle= driver.getTitle();
+        actualTitle = driver.getTitle();
 
         // compare the actual and the expected title and print out passed or failed
-        if (actualTitle.equals(expectedTitle)) System.out.println("Test Passed!");
-        else System.out.println("Test Failed");
+        // if (actualTitle.equals(expectedTitle)) System.out.println("Test Passed!");
+        // else System.out.println("Test Failed");
+        Assert.assertEquals(actualTitle, expectedTitle, "Actual title does not match expected");
     }
 
-    // find element by
-    @Test
-    public void findByID() {
-        driver.get(baseUrl);
 
-        //find element by id
-        String tagName = driver.findElement(By.id("header_logo")).getTagName();
-        System.out.println(tagName);
-    }
 
     // actions
     @Test
