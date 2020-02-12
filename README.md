@@ -5,7 +5,8 @@ Studying the following tutorials
     * [x] Locating GUI Elements
     * [x] Instantiating Web Elements
     * [x] Clicking on an Element
-    * [x] Get Commands (ToDo: get by link)
+    * [x] Get Commands
+    * [] FindElements Commands
     * [] Navigate commands
     * [] Closing and Quitting Browser Windows
     * [] Switching Between Frames
@@ -20,7 +21,8 @@ Studying the following tutorials
 ---
 
 Using following example sites
-* AutomationpracticeTests.com as a test site
+* http://AutomationpracticeTests.com
+* https://demoqa.com/
 
 ---
 

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 
 
-public class AutomationpracticeChromeTests extends AbstractChromeWebDriverTest {
+public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
 
     // declaration and instantiation of objects/variables
     String baseUrl = "http://automationpractice.com/index.php";

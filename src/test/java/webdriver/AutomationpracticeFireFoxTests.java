@@ -48,14 +48,14 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
     @Test
     public void getByLinkText() {
 
-        String tagName = driver.findElement(By.linkText("http://www.prestashop.com/")).getTagName();
+        String tagName = driver.findElement(By.linkText("Sign in")).getTagName();
         System.out.println(tagName);
     }
     //By.partialLinkText
     @Test
     public void getByPartialLinkText() {
 
-        String tagName = driver.findElement(By.partialLinkText("controller=order")).getText();
+        String tagName = driver.findElement(By.partialLinkText("Contact")).getText();
         System.out.println(tagName);
     }
 
@@ -76,6 +76,8 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
     }
 
     //By.xpath  |   | findElement(By.xpath("//html/body/div/table/tbody/tr/td[2]/table/ tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[3]/ form/table/tbody/tr[5]"))  |
+    //it is slow as compared to CSS.
+    //It’s browser dependent, and there are differences in IE vs. Firefox XPath implementations.
     @Test
     public void getByXpath() {
 
