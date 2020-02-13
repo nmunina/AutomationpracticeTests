@@ -6,8 +6,8 @@ Studying the following tutorials
     * [x] Instantiating Web Elements
     * [x] Clicking on an Element
     * [x] Get Commands
-    * [] FindElements Commands
-    * [] Navigate commands
+    * [x] FindElements Commands
+    * [x] Navigate commands
     * [] Closing and Quitting Browser Windows
     * [] Switching Between Frames
     * [] Switching Between Pop-up Windows
