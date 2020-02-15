@@ -8,10 +8,10 @@ Studying the following tutorials
     * [x] Get Commands
     * [x] FindElements Commands
     * [x] Navigate commands
-    * [] Closing and Quitting Browser Windows
+    * [x] Closing and Quitting Browser Windows
     * [] Switching Between Frames
     * [] Switching Between Pop-up Windows
-    * [] Waits
+    * [x] Waits
     * [] Conditions
     * [] Catching Exceptions
     

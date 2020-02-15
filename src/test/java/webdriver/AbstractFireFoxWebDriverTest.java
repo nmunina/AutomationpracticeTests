@@ -16,7 +16,7 @@ public abstract class AbstractFireFoxWebDriverTest {
 
     @BeforeTest
     public void beforeTest() {
-        //Download the web driver executable
+        //Download the latest web driver executable
         WebDriverManager.firefoxdriver().setup();
 
         //Create a instance of your web driver - chrome
@@ -30,12 +30,14 @@ public abstract class AbstractFireFoxWebDriverTest {
         driver.quit();
     }
 
-    public void sleep(int seconds) {
+    protected void sleep(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
+
+
 
 }

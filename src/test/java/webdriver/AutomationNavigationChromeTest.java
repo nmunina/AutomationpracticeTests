@@ -11,6 +11,8 @@ public class AutomationNavigationChromeTest extends AbstractChromeWebDriverTest 
     public void navigationForwardBackward() {
         String expectedTag = "textarea";
         driver.navigate().to(navigationUrl);
+        sleep(5);
+
         driver.findElement(By.linkText("Sortable")).click();
         driver.findElement(By.linkText("HTML contact form")).click();
         driver.navigate().back();
@@ -25,6 +27,8 @@ public class AutomationNavigationChromeTest extends AbstractChromeWebDriverTest 
     @Test
     public void webElementClear() {
     driver.get("https://demoqa.com/html-contact-form/");
+    sleep(5);
+
     driver.findElement(By.id("lname")).clear();
     }
 
@@ -42,6 +46,8 @@ public class AutomationNavigationChromeTest extends AbstractChromeWebDriverTest 
     @Test
     public void webElementIsDisplayd() {
         driver.get("https://demoqa.com/sortable/");
+        sleep(5);
+
         boolean isDisplayd = driver.findElement(By.id("sortable")).isDisplayed();
         System.out.println(isDisplayd);
     }
@@ -50,6 +56,8 @@ public class AutomationNavigationChromeTest extends AbstractChromeWebDriverTest 
     @Test
     public void webElementIsEnabled() {
         driver.get("https://demoqa.com/selectable/");
+        sleep(5);
+
         boolean isEnabled = driver.findElement(By.id("selectable")).isEnabled();
         boolean isSelected = driver.findElement(By.name("Item 2")).isSelected();
         System.out.println("Is enabled - " + isEnabled + ". Is selected - " + isSelected);
