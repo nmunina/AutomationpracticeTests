@@ -46,6 +46,14 @@ public class AutomationNavigationChromeTest extends AbstractChromeWebDriverTest 
         System.out.println(isDisplayd);
     }
 
+    // isEnabled( ) – This method return true/false depending on the state of the element
+    @Test
+    public void webElementIsEnabled() {
+        driver.get("https://demoqa.com/selectable/");
+        boolean isEnabled = driver.findElement(By.id("selectable")).isEnabled();
+        boolean isSelected = driver.findElement(By.name("Item 2")).isSelected();
+        System.out.println("Is enabled - " + isEnabled + ". Is selected - " + isSelected);
+    }
 
 
 

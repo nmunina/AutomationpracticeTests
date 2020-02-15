@@ -37,12 +37,12 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
     }
 
     //By.cssSelector
-    @Test
+   /* @Test
     public void getByCssSelector() {
 
         String tagName = driver.findElement(By.cssSelector("")).getTagName();
         System.out.println(tagName);
-    }
+    }*/
 
     //By.linkText
     @Test
@@ -84,5 +84,17 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
         String tagName = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[1]/a/img")).getTagName();
         System.out.println(tagName);
     }
+
+    // isEnabled( ) – This method return true/false depending on the state of the element
+    @Test
+    public void webElementIsEnabled() {
+        driver.get("https://demoqa.com/checkboxradio/");
+        boolean isSelected = driver.findElement(By.name("radio-1")).isSelected();
+        System.out.println(isSelected);
+       // driver.findElement(By.name("radio-1")).click();
+        System.out.println(". Is selected - " + isSelected);
+        driver.findElement(By.id("radio-2")).click();
+    }
+
 
 }
