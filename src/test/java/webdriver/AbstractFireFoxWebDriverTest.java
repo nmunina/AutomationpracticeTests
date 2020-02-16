@@ -20,9 +20,9 @@ public abstract class AbstractFireFoxWebDriverTest {
         WebDriverManager.firefoxdriver().setup();
 
         //Create a instance of your web driver - chrome
-        //String  baseUrl = "http://automationpractice.com/index.php";
+        String  baseUrl = "http://automationpractice.com/index.php";
         driver = new FirefoxDriver();
-        //driver.get(baseUrl);
+        driver.get(baseUrl);
     }
 
     @AfterTest

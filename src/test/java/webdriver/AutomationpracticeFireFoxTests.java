@@ -37,12 +37,12 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
     }
 
     //By.cssSelector
-   /* @Test
+   @Test
     public void getByCssSelector() {
 
-        String tagName = driver.findElement(By.cssSelector("")).getTagName();
+        String tagName = driver.findElement(By.cssSelector("#block_top_menu li:nth-child(1)")).getTagName();
         System.out.println(tagName);
-    }*/
+    }
 
     //By.linkText
     @Test

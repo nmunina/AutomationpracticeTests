@@ -31,7 +31,7 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
     }
 
     // actions
-    @Test
+    @Test (dependsOnMethods = {"pageTitle"}) //
     public void actionsClick() {
         driver.get(baseUrl);
         sleep(5);

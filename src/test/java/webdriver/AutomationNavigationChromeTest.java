@@ -58,11 +58,10 @@ public class AutomationNavigationChromeTest extends AbstractChromeWebDriverTest 
         driver.get("https://demoqa.com/selectable/");
         sleep(5);
 
-        boolean isEnabled = driver.findElement(By.id("selectable")).isEnabled();
+        /*boolean isEnabled = driver.findElement(By.id("selectable")).isEnabled();
         boolean isSelected = driver.findElement(By.name("Item 2")).isSelected();
-        System.out.println("Is enabled - " + isEnabled + ". Is selected - " + isSelected);
+        System.out.println("Is enabled - " + isEnabled + ". Is selected - " + isSelected);*/
+
+        driver.findElement(By.xpath("//html/body/div[1]/div[2]/div/div[2]/div[2]/ol/li[1]")).click();
     }
-
-
-
 }
