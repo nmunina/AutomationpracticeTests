@@ -15,9 +15,12 @@ WebElement browserRow1 = tableTbody.findElement(By.cssSelector("tr:nth-child(1) 
 WebElement browserRow2 = tableTbody.findElement(By.cssSelector("tr:nth-child(2) > td:nth-child(2)"));
 WebElement browserRow3 = tableTbody.findElement(By.cssSelector("tr:nth-child(3) > td:nth-child(2)"));
    
+   * [x] //Assert.assertEquals(newSurname, driver.findElement(By.id("inputLastName")).getAttribute("value"));
+   	
    * [] XPath
 
-	    * public void testXpathSelectorForaTableTd() {
+	    * 
+	    public void testXpathSelectorForaTableTd() {
 	driver.get("http://localhost:8080/pages/tables.html");
 		//$x("//*[@id='dataTables-example']/tbody/tr[1]/td[2]")
 		WebElement browserRow1 = driver.findElement(By.xpath("//*[@id='dataTables-example']/tbody/tr[1]/td[2]"));
@@ -36,9 +39,10 @@ WebElement browserRow3 = tableTbody.findElement(By.cssSelector("tr:nth-child(3) 
     //	$x("//*[@id='dataTables-example']/tbody/tr[1]/td[2]")
     //	[td]
 				
-		driver.get("http://localhost:8080/pages/tables.html");
-		WebElement headerBrowser = driver.findElement(By.xpath("//*[@id='dataTables-example']/thead/tr/th[2]"));
-		headerBrowser.click();
-		WebElement element = driver.findElement(By.xpath("//*[@id='dataTables-example']/tbody/tr[1]/td[2]"));
-		assertEquals(element.getText(), "All others");		
-	    }
+	//	driver.get("http://localhost:8080/pages/tables.html");
+	//	WebElement headerBrowser = driver.findElement(By.xpath("//*[@id='dataTables-example']/thead/tr/th[2]"));
+	//	headerBrowser.click();
+	//	WebElement element = driver.findElement(By.xpath("//*[@id='dataTables-example']/tbody/tr[1]/td[2]"));
+	//	assertEquals(element.getText(), "All others");		
+	//    }
+	    

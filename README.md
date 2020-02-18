@@ -14,6 +14,9 @@ Studying the following tutorials
     * [x] Waits
     * [] Conditions
     * [] Catching Exceptions
+    * [] CssSelect extra
+    * [] Flerval
+   
     
 * https://www.guru99.com/selenium-tutorial.html
 * https://www.softwaretestinghelp.com/selenium-tutorial-1/

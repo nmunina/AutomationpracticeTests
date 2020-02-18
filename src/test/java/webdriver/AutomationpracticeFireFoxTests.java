@@ -96,5 +96,10 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
         driver.findElement(By.id("radio-2")).click();
     }
 
+    @Test
+    public void findElements() {
+        driver.navigate();
+    }
+
 
 }

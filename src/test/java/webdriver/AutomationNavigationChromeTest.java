@@ -64,4 +64,14 @@ public class AutomationNavigationChromeTest extends AbstractChromeWebDriverTest 
 
         driver.findElement(By.xpath("//html/body/div[1]/div[2]/div/div[2]/div[2]/ol/li[1]")).click();
     }
+
+    @Test
+    public void navegateToBack() {
+        driver.navigate().to("https://demoqa.com/checkboxradio/");
+        driver.navigate().to("https://demoqa.com/");
+        driver.navigate().forward();
+        driver.navigate().back();
+        driver.navigate().refresh();
+    }
+
 }
