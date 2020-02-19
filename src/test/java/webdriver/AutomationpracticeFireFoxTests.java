@@ -1,8 +1,12 @@
 package webdriver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Iterator;
+import java.util.List;
 
 public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest {
 
@@ -43,6 +47,35 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
         String tagName = driver.findElement(By.cssSelector("#block_top_menu li:nth-child(1)")).getTagName();
         System.out.println(tagName);
     }
+
+    @Test
+    public void multipleSelection(){
+        driver.get("https://demoqa.com/selectable/");
+
+        // Here, the code below will select all rows matching the given XPath.
+        List<WebElement> rows = driver.findElements(By.cssSelector(".ui-selectee"));
+
+        // print the total number of elements
+        System.out.println("Total selected rows are " + rows.size());
+
+        // Now using Iterator we will iterate all elements
+        Iterator<WebElement> iter = rows.iterator();
+
+        // this will check whether list has some element or not
+        while (iter.hasNext()) {
+
+            // Iterate one by one
+            WebElement item = iter.next();
+
+            // get the text
+            String label = item.getText();
+
+            // print the text
+            System.out.println("Row label is " + label);
+        }
+    }
+
+
 
     //By.linkText
     @Test
@@ -95,11 +128,4 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
         System.out.println(". Is selected - " + isSelected);
         driver.findElement(By.id("radio-2")).click();
     }
-
-    @Test
-    public void findElements() {
-        driver.navigate();
-    }
-
-
 }

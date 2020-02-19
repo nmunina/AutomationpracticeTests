@@ -1,6 +1,7 @@
 package webdriver;
 
 import org.openqa.selenium.By;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
@@ -51,6 +52,7 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
 
         String pageTitle = driver.getTitle();
         System.out.println(pageTitle);
+        Reporter.log(pageTitle);
     }
 
     @Test // getPageSource() - Returns the source code of the page as a String value
@@ -60,6 +62,7 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
 
         String pageSource = driver.getPageSource();
         System.out.println(pageSource);
+        Reporter.log(pageSource);
     }
 
     @Test // getCurrentUrl() - Fetches the string representing the current URL that the browser is looking at
@@ -69,6 +72,7 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
 
         String currentUrl = driver.getCurrentUrl();
         System.out.println(currentUrl);
+        Reporter.getOutput().add("getOutput");
     }
 
     @Test // getText() - Fetches the inner text of the element that you specify
@@ -78,6 +82,7 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
 
         String getText = driver.findElement(By.id("home-page-tabs")).getText();
         System.out.println(getText);
+        Reporter.log(getText, true);
     }
 
 }

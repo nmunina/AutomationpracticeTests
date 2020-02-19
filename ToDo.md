@@ -16,7 +16,7 @@ WebElement browserRow2 = tableTbody.findElement(By.cssSelector("tr:nth-child(2) 
 WebElement browserRow3 = tableTbody.findElement(By.cssSelector("tr:nth-child(3) > td:nth-child(2)"));
    
    * [x] //Assert.assertEquals(newSurname, driver.findElement(By.id("inputLastName")).getAttribute("value"));
-   	
+   * [] executing order. How to "chain" testcases one after another (and it works!!)
    * [] XPath
 
 	    * 

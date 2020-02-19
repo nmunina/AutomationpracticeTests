@@ -32,7 +32,7 @@ import java.util.concurrent.TimeUnit;
     //    visibilityOfAllElements()
     //    visibilityOfAllElementsLocatedBy()
     //    visibilityOfElementLocated()
-// Fluent Wait is used to tell the web driver to wait for a condition, as well as the frequency
+
 
 public class AutomationWaitChrome extends AbstractChromeWebDriverTest {
 
@@ -57,7 +57,7 @@ public class AutomationWaitChrome extends AbstractChromeWebDriverTest {
         testLink.click();
     }
 
-    @Test
+    @Test // Fluent Wait is used to tell the web driver to wait for a condition, as well as the frequency
     public  void fluentWait() {
         driver.get("https://demoqa.com/");
         //Wait wait = new FluentWait(WebDriver reference)
