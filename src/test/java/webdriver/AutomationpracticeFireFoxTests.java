@@ -2,9 +2,8 @@ package webdriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-
 import java.util.Iterator;
 import java.util.List;
 
@@ -75,7 +74,19 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
         }
     }
 
+    @Test
+    public void selectDropdown(){
+        driver.get("https://demoqa.com/selectmenu/");
 
+        Select drpSpeed = new Select(driver.findElement(By.id("speed-button")));
+        drpSpeed.selectByVisibleText("Fast");
+        sleep(2);
+        drpSpeed.selectByIndex(2);
+        sleep(2);
+        drpSpeed.deselectAll();
+        sleep(2);
+
+    }
 
     //By.linkText
     @Test

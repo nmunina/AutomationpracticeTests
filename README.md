@@ -15,7 +15,7 @@ Studying the following tutorials
     * [] Conditions
     * [] Catching Exceptions
     * [] CssSelect extra
-    * [] Flerval
+    * [x] Flerval
    
     
 * https://www.guru99.com/selenium-tutorial.html
