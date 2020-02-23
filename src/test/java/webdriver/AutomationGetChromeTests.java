@@ -85,4 +85,16 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
         Reporter.log(getText, true);
     }
 
+    /*
+                WebElement header = driver.findElement(By.cssSelector("#chapter-861 div:nth-child(2)"));
+            System.out.println("tagName: " + header.getTagName());
+            System.out.println("location: " + header.getLocation());
+            System.out.println("attribute title: " + header.getAttribute("title"));
+        System.out.println("attribute class: " + header.getAttribute("class"));
+            System.out.println("webElement: " + header);
+        System.out.println("gettext: " + header.getText());
+        System.out.println("getRect: " + header.getRect());
+        System.out.println("getClass: " + header.getClass());
+     */
+
 }

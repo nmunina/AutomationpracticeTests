@@ -64,6 +64,4 @@ public class AutomationScrollingChrome extends AbstractChromeWebDriverTest {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         sleep(2);
     }
-
-
 }
