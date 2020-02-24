@@ -1,6 +1,7 @@
 package webdriver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.Assert;
@@ -85,16 +86,20 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
         Reporter.log(getText, true);
     }
 
-    /*
-                WebElement header = driver.findElement(By.cssSelector("#chapter-861 div:nth-child(2)"));
-            System.out.println("tagName: " + header.getTagName());
-            System.out.println("location: " + header.getLocation());
-            System.out.println("attribute title: " + header.getAttribute("title"));
+    @Test
+    public void  printAttributes() {
+        driver.get("http://automationpractice.com/index.php");
+        WebElement header = driver.findElement(By.id("homepage-slider"));
+        //header.sendKeys("my own text input");
+        System.out.println("tagName: " + header.getTagName());
+        System.out.println("location: " + header.getLocation());
+        System.out.println("attribute title: " + header.getAttribute("title"));
         System.out.println("attribute class: " + header.getAttribute("class"));
-            System.out.println("webElement: " + header);
+        System.out.println("webElement: " + header);
         System.out.println("gettext: " + header.getText());
         System.out.println("getRect: " + header.getRect());
         System.out.println("getClass: " + header.getClass());
-     */
+        System.out.println("getCssValue: " + header.getCssValue("container"));
 
+    }
 }
