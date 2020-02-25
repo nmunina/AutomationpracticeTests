@@ -3,9 +3,18 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="testAll">
-    <test name="testngTest">
+    <test name="testingChrome">
         <classes>
             <class name="webdriver.AutomationGetChromeTests" />
+            <class name="webdriver.AutomationNavigationChromeTest" />
+            <class name="webdriver.AutomationScrollingChrome" />
+            <class name="webdriver.AutomationSelectChrome"/>
+            <class name="webdriver.AutomationWaitChrome"/>
+        </classes>
+    </test>
+    <test name="testingFireFox">
+        <classes>
+            <class name="webdriver.AutomationpracticeFireFoxTests" />
         </classes>
     </test>
 </suite>

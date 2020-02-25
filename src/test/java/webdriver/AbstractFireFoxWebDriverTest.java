@@ -3,12 +3,14 @@ package webdriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public abstract class AbstractFireFoxWebDriverTest {
 
     protected WebDriver driver;
+
 
     public AbstractFireFoxWebDriverTest() {
         super();
@@ -18,6 +20,7 @@ public abstract class AbstractFireFoxWebDriverTest {
     public void beforeTest() {
         //Download the latest web driver executable
         WebDriverManager.firefoxdriver().setup();
+
 
         //Create a instance of your web driver - chrome
         String  baseUrl = "http://automationpractice.com/index.php";

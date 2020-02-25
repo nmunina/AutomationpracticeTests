@@ -2,7 +2,9 @@ package webdriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.List;
@@ -12,6 +14,22 @@ public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest
     // base variables
     String expectedPageTitle = "My Store";
     String actualPageTitle = "";
+
+    // tagName[attribute=attributeName]
+    //("input[id=email]")
+
+    //By.cssSelector(“div[class=’_1vC4OE _2rQ-NK’]”);
+    //By.cssSelector(“div._1vC4OE._2rQ-NK”);
+    //By.xpath(“//div[@class=’_1vC4OE _2rQ-NK’]”);
+    //div#someId .aClass.andAnother input[type=text]
+    //input[name=Sex][value=M]   for <input type="radio" name="Sex" value="F" />
+    @Test
+    public void sccFromStaffan() {
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        WebElement header = driver.findElement(By.cssSelector("img[class=img-responsive]"));
+        wait.until(ExpectedConditions.visibilityOf(header)).click();
+    }
+
 
     // test "get page title and compare"
     @Test
