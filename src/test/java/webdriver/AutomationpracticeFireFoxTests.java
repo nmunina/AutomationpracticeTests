@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.List;
 
-public class AutomationpracticeFireFoxTests extends AbstractChromeWebDriverTest {
+public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
 
     // base variables
     String expectedPageTitle = "My Store";
@@ -24,13 +24,12 @@ public class AutomationpracticeFireFoxTests extends AbstractChromeWebDriverTest 
     //By.xpath(“//div[@class=’_1vC4OE _2rQ-NK’]”);
     //div#someId .aClass.andAnother input[type=text]
     //input[name=Sex][value=M]   for <input type="radio" name="Sex" value="F" />
-    @Test
+    @Test (enabled = false)
     public void sccFromStaffan() {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         WebElement header = driver.findElement(By.cssSelector("img[class=img-responsive]"));
         wait.until(ExpectedConditions.visibilityOf(header)).click();
     }
-
 
     // test "get page title and compare"
     @Test

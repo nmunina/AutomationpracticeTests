@@ -3,14 +3,6 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="testAll" parallel="none">
-    <test name="testingFireFox">
-        <parameter name="browser" value="firefox" />
-        <classes>
-            <class name="webdriver.AutomationpracticeFireFoxTests" />
-            <class name="webdriver.AutomationGetChromeTests" />
-        </classes>
-    </test>
-
     <test name="testingChrome">
         <parameter name="browser" value="chrome" />
         <classes>
@@ -20,5 +12,13 @@
                <class name="webdriver.AutomationWaitChrome"/> -->
            </classes>
        </test>
+
+    <test name="testingFireFox">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="webdriver.AutomationpracticeFireFoxTests" />
+            <class name="webdriver.AutomationGetChromeTests" />
+        </classes>
+    </test>
 
    </suite>

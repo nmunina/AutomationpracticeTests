@@ -8,7 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-public class MultiBrowser {
+public class AbstractMultiBrowser {
 
     public WebDriver driver;
 
@@ -25,6 +25,7 @@ public class MultiBrowser {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             driver.get("http://automationpractice.com/index.php");
+            sleep(2);
         } else if (browser.equalsIgnoreCase("chrome")) {
 
         //Download the web driver executable
