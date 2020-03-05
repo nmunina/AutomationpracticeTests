@@ -9,11 +9,12 @@ import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.List;
 
-public class AutomationpracticeFireFoxTests extends AbstractFireFoxWebDriverTest {
+public class AutomationpracticeFireFoxTests extends AbstractChromeWebDriverTest {
 
     // base variables
     String expectedPageTitle = "My Store";
     String actualPageTitle = "";
+    String  baseUrl = "http://automationpractice.com/index.php";
 
     // tagName[attribute=attributeName]
     //("input[id=email]")

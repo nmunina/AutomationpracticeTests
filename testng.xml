@@ -2,19 +2,23 @@
 <!--https://www.dev2qa.com/testng-report-example/-->
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="testAll">
-    <test name="testingChrome">
-        <classes>
-            <class name="webdriver.AutomationGetChromeTests" />
-            <class name="webdriver.AutomationNavigationChromeTest" />
-            <class name="webdriver.AutomationScrollingChrome" />
-            <class name="webdriver.AutomationSelectChrome"/>
-            <class name="webdriver.AutomationWaitChrome"/>
-        </classes>
-    </test>
+<suite name="testAll" parallel="none">
     <test name="testingFireFox">
+        <parameter name="browser" value="firefox" />
         <classes>
             <class name="webdriver.AutomationpracticeFireFoxTests" />
+            <class name="webdriver.AutomationGetChromeTests" />
         </classes>
     </test>
-</suite>
+
+    <test name="testingChrome">
+        <classes>
+
+            <class name="webdriver.AutomationNavigationChromeTest" />
+            <!--   <class name="webdriver.AutomationScrollingChrome" />
+               <class name="webdriver.AutomationSelectChrome"/>
+               <class name="webdriver.AutomationWaitChrome"/> -->
+           </classes>
+       </test>
+
+   </suite>
