@@ -9,6 +9,7 @@ public class DemoQANavigationChromeTest extends AbstractChromeWebDriverTest {
 
     @Test
     public void navigationForwardBackward() {
+
         String expectedTag = "textarea";
         driver.navigate().to(navigationUrl);
         sleep(5);

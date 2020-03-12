@@ -2,6 +2,7 @@ package webdriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.Assert;
@@ -11,59 +12,55 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
 
     // declaration and instantiation of objects/variables
     String baseUrl = "http://automationpractice.com/index.php";
-    String expectedTitle = "My Store";
+
     String actualTitle = "";
 
     // fetch Mercury Tours' homepage
     // verify its title
     // print out the result of the comparison
     @Test
-    public void pageTitle() {
+    public void pageTitle() { // getTitle - Fetches the title of the current page
+        String expectedTitle = "My Store";
+
         // launch Chrome fox and direct it to the Base URL
         driver.get(baseUrl);
-        sleep(5);
+
+        // wait until the page is loaded
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("page")));
 
         // get the actual page title
         actualTitle = driver.getTitle();
 
         // compare the actual and the expected title and print out passed or failed
-        // if (actualTitle.equals(expectedTitle)) System.out.println("Test Passed!");
-        // else System.out.println("Test Failed");
         Assert.assertEquals(actualTitle, expectedTitle, "Actual title does not match expected");
     }
 
     // actions
-    @Test// (dependsOnMethods = {"pageTitle"})
+    @Test // (dependsOnMethods = {"pageTitle"})
     public void actionsClick() {
         driver.get(baseUrl);
-        sleep(5);
 
-        // click
         /*
-        It does not take any parameter/argument.
+        click() does not take any parameter/argument.
         The method automatically waits for a new page to load if applicable.
         The element to be clicked-on, must be visible
          */
-        driver.findElement(By.name("submit_search")).click(); }
-
-    @Test // getTitle - Fetches the title of the current page
-    public void getTitle() {
-        driver.get(baseUrl);
-        sleep(5);
-
-        String pageTitle = driver.getTitle();
-        System.out.println(pageTitle);
-        Reporter.log(pageTitle);
+        wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.name("submit_search"))).click();
+        sleep(2);
     }
 
     @Test // getPageSource() - Returns the source code of the page as a String value
     public void getPageSource() {
         driver.get(baseUrl);
-        sleep(5);
+
+        // wait until the page is loaded
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("page")));
 
         String pageSource = driver.getPageSource();
         System.out.println(pageSource);
         Reporter.log(pageSource);
+        sleep(2);
     }
 
     @Test // getCurrentUrl() - Fetches the string representing the current URL that the browser is looking at
@@ -81,6 +78,7 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
         driver.get(baseUrl);
         sleep(5);
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("home-page-tabs")));
         String getText = driver.findElement(By.id("home-page-tabs")).getText();
         System.out.println(getText);
         Reporter.log(getText, true);

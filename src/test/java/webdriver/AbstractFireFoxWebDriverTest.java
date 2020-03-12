@@ -8,9 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public abstract class AbstractFireFoxWebDriverTest {
-
     protected WebDriver driver;
-
 
     public AbstractFireFoxWebDriverTest() {
         super();
@@ -21,11 +19,8 @@ public abstract class AbstractFireFoxWebDriverTest {
         //Download the latest web driver executable
         WebDriverManager.firefoxdriver().setup();
 
-
-        //Create a instance of your web driver - chrome
-        String  baseUrl = "http://automationpractice.com/index.php";
+        //Create a instance of your web driver - firefox
         driver = new FirefoxDriver();
-        driver.get(baseUrl);
     }
 
     @AfterTest

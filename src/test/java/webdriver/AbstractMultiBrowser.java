@@ -8,14 +8,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-public class AbstractMultiBrowser {
+public abstract class AbstractMultiBrowser {
 
     public WebDriver driver;
 
 //    public MultiBrowser() {}
-
     @Parameters("browser")
-
     @BeforeTest
     // Passing Browser parameter from TestNG xml
     public void beforeTest(String browser) {
@@ -24,8 +22,6 @@ public class AbstractMultiBrowser {
         if(browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
-            driver.get("http://automationpractice.com/index.php");
-            sleep(2);
         } else if (browser.equalsIgnoreCase("chrome")) {
 
         //Download the web driver executable
@@ -33,8 +29,6 @@ public class AbstractMultiBrowser {
 
         //specified version for Chrome driver
         WebDriverManager.chromedriver().version("80.0.3987.106").setup();
-
-        //Create a instance of your web driver - chrome
         driver = new ChromeDriver();
         }
     }
