@@ -14,7 +14,7 @@ public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
     // base variables
     String expectedPageTitle = "My Store";
     String actualPageTitle = "";
-    String  baseUrl = "http://automationpractice.com/index.php";
+    String baseUrl = "http://automationpractice.com/index.php";
 
     // tagName[attribute=attributeName]
     //("input[id=email]")

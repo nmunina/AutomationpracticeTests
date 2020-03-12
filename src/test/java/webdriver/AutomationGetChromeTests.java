@@ -7,13 +7,10 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
-
 public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
 
     // declaration and instantiation of objects/variables
     String baseUrl = "http://automationpractice.com/index.php";
-
-    String actualTitle = "";
 
     // fetch Mercury Tours' homepage
     // verify its title
@@ -21,6 +18,7 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
     @Test
     public void pageTitle() { // getTitle - Fetches the title of the current page
         String expectedTitle = "My Store";
+        String actualTitle = "";
 
         // launch Chrome fox and direct it to the Base URL
         driver.get(baseUrl);
@@ -98,6 +96,5 @@ public class AutomationGetChromeTests extends AbstractChromeWebDriverTest {
         System.out.println("getRect: " + header.getRect());
         System.out.println("getClass: " + header.getClass());
         System.out.println("getCssValue: " + header.getCssValue("container"));
-
     }
 }
