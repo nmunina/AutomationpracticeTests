@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AutomationNavigationChromeTest extends AbstractChromeWebDriverTest {
+public class DemoQANavigationChromeTest extends AbstractChromeWebDriverTest {
     String navigationUrl = "https://demoqa.com/";
 
     @Test

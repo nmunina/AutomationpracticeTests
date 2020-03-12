@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
     //    visibilityOfElementLocated()
 
 
-public class AutomationWaitChrome extends AbstractChromeWebDriverTest {
+public class DemoQAWaitChrome extends AbstractChromeWebDriverTest {
 
     @Test
     public void implicitWait() {

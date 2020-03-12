@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class AutomationSelectChrome extends AbstractChromeWebDriverTest {
+public class DemoQASelectChrome extends AbstractChromeWebDriverTest {
 
     @Test
     public void selectDropdown(){

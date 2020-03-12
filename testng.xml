@@ -6,10 +6,10 @@
     <test name="testingChrome">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="webdriver.AutomationNavigationChromeTest" />
-            <!--   <class name="webdriver.AutomationScrollingChrome" />
-               <class name="webdriver.AutomationSelectChrome"/>
-               <class name="webdriver.AutomationWaitChrome"/> -->
+            <class name="webdriver.DemoQANavigationChromeTest" />
+            <!--   <class name="webdriver.DemoQAScrollingChrome" />
+               <class name="webdriver.DemoQASelectChrome"/>
+               <class name="webdriver.DemoQAWaitChrome"/> -->
            </classes>
        </test>
 
