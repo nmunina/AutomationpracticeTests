@@ -9,12 +9,12 @@ import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.List;
 
-public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
+public class AutomationGetFireFoxTests extends AbstractFireFoxWebDriverTest {
 
     // base variables
     String expectedPageTitle = "My Store";
     String actualPageTitle = "";
-    String baseUrl = "http://automationpractice.com/index.php";
+    String automationPracticeURL = "http://automationpractice.com/index.php";
 
     // tagName[attribute=attributeName]
     //("input[id=email]")
@@ -26,6 +26,7 @@ public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
     //input[name=Sex][value=M]   for <input type="radio" name="Sex" value="F" />
     @Test (enabled = false)
     public void sccFromStaffan() {
+        driver.get(automationPracticeURL);
         WebDriverWait wait = new WebDriverWait(driver, 20);
         WebElement header = driver.findElement(By.cssSelector("img[class=img-responsive]"));
         wait.until(ExpectedConditions.visibilityOf(header)).click();
@@ -34,6 +35,8 @@ public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
     // test "get page title and compare"
     @Test
     public void pageTitle() {
+        driver.get(automationPracticeURL);
+
         actualPageTitle = driver.getTitle();
 
         if (actualPageTitle.equals(expectedPageTitle)) System.out.println("Test Passed!");
@@ -45,6 +48,8 @@ public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
     @Test
     public void findByID() {
 
+        driver.get(automationPracticeURL);
+
         String tagName = driver.findElement(By.id("header_logo")).getTagName();
         System.out.println(tagName);
     }
@@ -53,6 +58,7 @@ public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
     @Test
     public void getByName() {
 
+        driver.get(automationPracticeURL);
         String tagName = driver.findElement(By.name("search_query")).getTagName();
         System.out.println(tagName);
     }
@@ -60,63 +66,23 @@ public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
     //By.cssSelector
    @Test
     public void getByCssSelector() {
-
+        driver.get(automationPracticeURL);
         String tagName = driver.findElement(By.cssSelector("#block_top_menu li:nth-child(1)")).getTagName();
         System.out.println(tagName);
-    }
-
-    @Test
-    public void multipleSelection(){
-        driver.get("https://demoqa.com/selectable/");
-
-        // Here, the code below will select all rows matching the given XPath.
-        List<WebElement> rows = driver.findElements(By.cssSelector(".ui-selectee"));
-
-        // print the total number of elements
-        System.out.println("Total selected rows are " + rows.size());
-
-        // Now using Iterator we will iterate all elements
-        Iterator<WebElement> iter = rows.iterator();
-
-        // this will check whether list has some element or not
-        while (iter.hasNext()) {
-
-            // Iterate one by one
-            WebElement item = iter.next();
-
-            // get the text
-            String label = item.getText();
-
-            // print the text
-            System.out.println("Row label is " + label);
-        }
-    }
-
-    @Test
-    public void selectDropdown(){
-        driver.get("https://demoqa.com/selectmenu/");
-
-        Select drpSpeed = new Select(driver.findElement(By.id("speed-button")));
-        drpSpeed.selectByVisibleText("Fast");
-        sleep(2);
-        drpSpeed.selectByIndex(2);
-        sleep(2);
-        drpSpeed.deselectAll();
-        sleep(2);
-
     }
 
     //By.linkText
     @Test
     public void getByLinkText() {
-
+        driver.get(automationPracticeURL);
         String tagName = driver.findElement(By.linkText("Sign in")).getTagName();
         System.out.println(tagName);
     }
+
     //By.partialLinkText
     @Test
     public void getByPartialLinkText() {
-
+        driver.get(automationPracticeURL);
         String tagName = driver.findElement(By.partialLinkText("Contact")).getText();
         System.out.println(tagName);
     }
@@ -124,7 +90,7 @@ public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
     //By.className
     @Test
     public void getByClassName () {
-
+        driver.get(automationPracticeURL);
         String tagName = driver.findElement(By.className("shop-phone")).getText();
         System.out.println(tagName);
     }
@@ -132,7 +98,7 @@ public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
     //By.tagName
     @Test
     public void getByTagName () {
-
+        driver.get(automationPracticeURL);
         String tagName = driver.findElement(By.tagName("input")).getText();
         System.out.println(tagName);
     }
@@ -142,19 +108,8 @@ public class AutomationpracticeFireFoxTests extends AbstractMultiBrowser {
     //It’s browser dependent, and there are differences in IE vs. Firefox XPath implementations.
     @Test
     public void getByXpath() {
-
+        driver.get(automationPracticeURL);
         String tagName = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[1]/a/img")).getTagName();
         System.out.println(tagName);
-    }
-
-    // isEnabled( ) – This method return true/false depending on the state of the element
-    @Test
-    public void webElementIsEnabled() {
-        driver.get("https://demoqa.com/checkboxradio/");
-        boolean isSelected = driver.findElement(By.name("radio-1")).isSelected();
-        System.out.println(isSelected);
-       // driver.findElement(By.name("radio-1")).click();
-        System.out.println(". Is selected - " + isSelected);
-        driver.findElement(By.id("radio-2")).click();
     }
 }

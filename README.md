@@ -42,5 +42,7 @@ Using following example sites
 | By.xpath  |   | findElement(By.xpath("//html/body/div/table/tbody/tr/td[2]/table/ tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[3]/ form/table/tbody/tr[5]"))  |
 | By.partialLinkText  |   |   |
 
-
+## how to
+add testNG to IntelliJ IDEA
+https://www.jetbrains.com/help/idea/configuring-testing-libraries.html
 
