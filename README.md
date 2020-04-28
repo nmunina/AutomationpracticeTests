@@ -26,6 +26,7 @@ Studying the following tutorials
 Using following example sites
 * http://AutomationpracticeTests.com
 * https://demoqa.com/
+* https://www.techbeamers.com/websites-to-practice-selenium-webdriver-online/
 
 ---
 
